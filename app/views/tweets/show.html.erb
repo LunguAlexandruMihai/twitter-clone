@@ -1,0 +1,19 @@
+<div class="row">
+	<%= render partial: 'index/right' %>
+	<div class="timeline">
+		<div class="col-md-8 col-xs-8 col-sm-8">
+				<h2 class="title">Tweet by <i>@<%= @tweet.user.tweetname %></i></h2>
+				<ul class="tweets"> 
+					<li class="tweet">
+						<div class="tweet-content">
+							<%= @tweet.content %>
+						</div>
+						<div class="tweet-footer">
+							Posted <%= "#{time_ago_in_words(@tweet.created_at)}" %> ago by 
+							<%= link_to(@tweet.user.email,profile_path(@tweet.user)) %>
+						</div>
+					</li>
+				</ul>
+		</div>
+	</div>	
+</div>

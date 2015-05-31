@@ -1,0 +1,12 @@
+<div class="row comment-form">
+  <%= simple_form_for @comment, url: new_tweet_comment do |f| %>
+      <div class="col-md-12">
+        <p>
+          <%= f.text_area :content,class:'form-control', placeholder: "Write comment..." %>
+        </p>
+        <p>
+          <%= f.submit "Comment", class: "btn btn-large btn-primary" %>
+        </p>
+      </div>
+  <% end %>
+</div>

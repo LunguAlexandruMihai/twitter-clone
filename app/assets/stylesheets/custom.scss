@@ -1,0 +1,129 @@
+
+
+.auth-container{
+	background: #ffffff;
+	border: 1px solid #6fa3c4;
+	border-radius: 4px;
+	-moz-border-radius: 4px;
+	-ms-border-radius: 4px;
+	-webkit-border-radius: 4px;
+	color:#000000;
+	padding-bottom: 10px;
+}
+
+.auth-container h4{
+	border-bottom: 1px solid #e1e8ed;
+  box-shadow: 0 1px 0 #fff;
+  color: #66757f;
+  display: block;
+  font-size: 16px;
+  font-weight: 300;
+  margin-bottom: 12px;
+  padding: 10px 12px;
+  position: relative;
+  text-shadow: 0 1px 0 rgba(255,255,255,0.6);
+}
+a.navbar-brand{
+	font-size:25px;
+}
+a.navbar-brand > .fa-twitter{
+	color:#55acee;
+}
+
+.sparator{}
+
+.auth-right{
+	color:#ffffff;
+}
+.auth-right h1{
+	text-align: center;
+}
+.auth-right p{
+	font-size: 21px;
+  line-height: 31px;
+  text-shadow: none;
+}
+
+.separator{
+	color: #8899a6;
+  font-weight: bold;
+  margin: 0 1px 0 2px;
+}
+
+.front-container{
+
+}
+
+.profile{
+  margin-right: 15px;
+  border-bottom: 1px solid #e8e8e8;
+  background-color: #ffffff;
+  
+}
+.timeline{
+  .col-md-8,
+  .col-xs-8,
+  .col-sm-8{
+    background-color: #fff;
+    border-radius: 5px; 
+    padding: 0;
+    margin:0;
+  }
+}
+.tweet-content {
+  display: block;
+  margin-left: 63px;
+}
+.tweet-footer {
+  font-size: 13px;
+  color: #aaa;
+}
+.title {
+  font-size: 25px;
+  color: #aaa;
+  margin: 0;
+  padding: 10px 15px 0;
+}
+.tweetname{
+  padding: 10px 15px 0;
+  font-size: 18px;
+}
+.tweets {
+  list-style: none;
+  margin: 10px 0 0 0;
+  padding:0;
+
+  .tweet {
+    padding: 10px 15px 5px;
+    border-top: 1px solid #e8e8e8;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+
+    &:hover {
+      background-color: #F5F8FA;
+    }
+    &:last-child {
+      border-bottom: 1px solid #e8e8e8;
+    }
+  }
+}
+.stats {
+  border-bottom: 1px solid #e8e8e8;
+  table {
+    th, td {
+      padding-left: 20px;
+    }
+    th {
+      color: #aaa;
+      padding-top: 7px;
+    }
+    td {
+      padding-bottom: 5px;
+      font-size: 23px;
+    }
+  }
+}
+.tweet-form{
+  padding-top: 10px;
+  background-color: rgba(0, 132, 180, 0.1);
+}

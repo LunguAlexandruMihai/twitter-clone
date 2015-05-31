@@ -1,0 +1,28 @@
+<div class="row">
+	<%= render partial: 'index/right' %>
+	<div class="timeline">
+		<div class="col-md-8 col-xs-8 col-sm-8">
+			<% if @tweets.any? %>
+				<h2 class="title">All Tweets</h2>
+				<ul class="tweets"> 
+					<% @tweets.each do |item| %>
+						<li class="tweet">
+							<div class="tweet-content">
+								<%= item.content %>
+							</div>
+							<div class="tweet-footer">
+								Posted <%= "#{time_ago_in_words(item.created_at)}" %> ago by
+								<%= link_to(item.user.email,profile_path(item.user)) %> | 
+								<%= link_to 'View', tweet_path(item.id) %>
+							</div>
+						</li>
+					<% end %>
+				</ul>	
+			<% else %>
+				<div class="alert alert-danger">
+					No tweets were found!
+				</div>
+			<% end %>
+		</div>
+	</div>	
+</div>

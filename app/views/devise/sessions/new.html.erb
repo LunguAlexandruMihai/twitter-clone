@@ -1,0 +1,37 @@
+<div class="row front-container">
+  <div class="col-md-7 col-sm-7 col-xs-7 auth-right">
+    <%= render "devise/shared/right" %>  
+  </div>
+  <div class="col-md-5 col-sm-5 col-xs-5 auth-container">
+    <h4>Sign In</h4>
+    <%= simple_form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+      <%= devise_error_messages! %>
+      <div class="row">
+        <div class="col-md-12 col-sm-12 col-xs-12">  
+          <%= f.email_field :email, class:'form-control input-sm',autofocus: true,placeholder: 'E-mail' %>
+        </div>
+      </div>
+      <p></p>
+      <div class="row">
+        <div class="col-md-8 col-sm-8 col-xs-8">  
+          <%= f.password_field :password,class:'form-control input-sm', autocomplete: "off",placeholder: 'Password' %>
+        </div>
+        <div class="col-md-4 col-sm-4 col-xs-4">  
+          <%= f.submit "Log in",class:'btn btn-primary btn-block btn-sm' %>
+        </div>
+      </div>
+      <% if devise_mapping.rememberable? -%>
+        <div class="row">
+          <div class="col-md-5 col-sm-5 col-xs-5">  
+            <%= f.label :remember_me %>
+            <%= f.check_box :remember_me %>
+          </div>
+          <div class="col-md-7 col-sm-7 col-xs-7 pull-right">  
+            <%= render "devise/shared/links" %> 
+          </div>  
+        </div>
+      <% end -%>
+    <% end %>
+  </div>
+</div> 
+  

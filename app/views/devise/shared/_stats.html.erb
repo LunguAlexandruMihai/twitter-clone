@@ -1,0 +1,18 @@
+<div class="row">
+	<div class="stats">	
+		<table>
+			<thead>
+				<th>Tweets</th>
+				<th>Following</th>
+				<th>Followers</th>
+			</thead>
+			<tbody>
+				<tr>
+					<td><%= current_user.tweets.count %></td>
+					<td><%= current_user.followed_users.count %></td>
+					<td><%= current_user.followers.count %></td>
+				</tr>
+			</tbody>
+		</table>
+	</div>	
+</div>

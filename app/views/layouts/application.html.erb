@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<head>
+  <title>Twitter Clone</title>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+ <% if !user_signed_in? %>
+ 	<ul class="slideshow">
+	  <li><span></span></li>
+	  <li><span></span></li>
+	  <li><span></span></li>
+	  <li><span></span></li>
+	  <li><span></span></li>
+	  <li><span></span></li>
+	</ul>
+ <% end %>
+
+	<nav class="navbar navbar-default navbar-static-top">
+    <div class="container">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="<%= root_path %>">
+        	<i class="fa fa-twitter"></i>
+        </a>
+      </div>
+      <% if user_signed_in? %>	
+	    <div id="navbar" class="navbar-collapse collapse">	
+	    	<%= render_navigation() %>  
+	    </div>	
+		<% end %>
+    </div> 
+  </nav> 
+	     
+
+	<div class="container">
+		<%= yield %>
+	</div>
+
+</body>
+</html>

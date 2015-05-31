@@ -1,0 +1,6 @@
+<div class="profile">
+	<h4 class="tweetname">
+		<%= link_to ("@"+@user.tweetname)  %>
+	</h4>
+	<p><%= render partial: 'profiles/follow_form' if user_signed_in? %></p>
+</div>

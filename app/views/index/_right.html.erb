@@ -1,0 +1,8 @@
+<% flash.each do |key ,value| %>
+		<div class="alert alert-<%= key %>"><%= value %> </div>
+	<% end %>
+	<div class="col-md-3 col-xs-3 col-sm-3 profile">
+		<%= render partial: 'devise/shared/profile' %>
+		<%= render partial: 'devise/shared/stats' %>
+		<%= render partial: 'tweets/tweet' if user_signed_in? %>
+	</div>
